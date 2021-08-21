@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+
+    <input type="text" id="t1">
+    <input type="text" id="t2">
+    <input type="text" id="t3">
+    <p id="p1">welcome to  class</p>
+    <input type="button" value="show" id="btn1" />
+    <input type="button" value="hide" id="btn2" />
+    <script>
+        $(document).ready(function()
+        {
+           
+           // $("#p1").hide();
+            $("#t1,#t2").change(function () {
+                var txt= Number ($("#t1").val());
+                var txt1= Number($("#t2").val());
+                var total=txt+txt1;
+                $("#t3").val(total);
+              
+            })
+          
+
+        })
+    </script>
+
+</body>
+</html>

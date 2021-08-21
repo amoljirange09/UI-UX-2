@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <ul id="demo"></ul>
+    <script>
+        
+        data=[1,2,3,4,5]
+
+        $(document).ready(function () {
+            $.each(data, function (i, d) {
+                $("#demo").append("<li>" + d + "</li>");
+            });
+        });
+    </script>
+
+</body>
+</html>

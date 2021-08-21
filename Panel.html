@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+    <title></title>
+    <style>
+        #filp,#panel{
+            padding:5px;
+            background-color:red;
+            border:1px solid green;
+            height:50px;width:20%;
+        }
+        #panel{
+            padding:50px;
+           display:none;
+           height:30px;width:20%;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="stop" id="btn1" />
+    <div id="filp">welcome</div>
+    <div id="panel"></div>
+   
+    <script>
+        $(document).ready(function(){
+
+             
+            $("#filp").click(function()
+            {
+                $("#panel").slideUp(); {
+                    $("#panel").slideDown(3000);
+                    $("#panel").slideToggle();
+                    $("#btn1").click(function(){
+                        $("#panel").stop();
+                    })
+                }
+            })
+            
+        })
+    </script>
+  
+    
+
+</body>
+</html>

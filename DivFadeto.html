@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+    <div id="div1" style="height:50px;width:50%;background-color:red"></div>
+    <div id="div2" style="height:50px;width:80%;background-color:blue"></div>
+    <div id="div3" style="height:60px;width:40%;background-color:red"></div>
+    <input type="button" value="Display" id="btn1" />
+    
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#div1").fadeTo();
+                $("#div2").fadeTo("slow",0.5);
+                $("#div3").fadeTo(3000,0.1)
+            })
+        })
+        </script>
+</body>
+</html>

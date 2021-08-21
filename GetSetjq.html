@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <input type="text" value="Abc" id="text" />
+    <p id="demo">welcome to<b>jquery</b></p>
+    <input type="button" value="HTML" id="btn1" />
+    <input type="button" value="TEXT" id="btn2" />
+    <input type="button" value="VAL" id="btn3" />
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert("HTML:" + $("#demo").html());
+
+            });
+            $("#btn2").click(function () {
+                alert("TEXT:" + $("#demo").text());
+            });
+            $("#btn3").click(function () {
+                alert("VAL:" + $("#demo").val());
+            });
+        });
+    </script>
+
+</body>
+</html>

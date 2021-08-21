@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <input type="text" id="1" placeholder="Student_name" /><br /><br />
+    <input type="text" id="2" placeholder="Student_rollno" /><br /><br />
+    <input type="text" id="3" placeholder="sub1" /><br /><br />
+    <input type="text" id="4" placeholder="sub2" /><br /><br />
+    <input type="text" id="5" placeholder="sub3" /><br /><br />
+    <input type="text" id="6" placeholder="total" /><br /><br />
+    <input type="text" id="7" placeholder="percentage" /><br /><br />
+    <input type="text" id="8" placeholder="status" /><br /><br />
+    <input type="button" value="remove" id="btn1" /><br /><br />
+
+    <script>
+        $(document).ready(function () {
+            $("#5").change(function () {
+               
+
+              var a = Number($("#3").val()) + Number($("#4").val()) + Number($("#5").val());
+
+                    $("#6").val(a);
+                    var per = a / 3;
+                    $("#7").val(per);
+                    if (per >= 35) {
+
+                        $("#8").val("pass");
+                    }
+                    else {
+                        $("8").val("fail");
+                    }
+            });
+            $(document).remove(function () {
+                var c = "";
+                $("#1").val;
+            });
+           
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<title></title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row col-md-12">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<div class="form-horizontal" style="background-color:aqua">
+						<div class="form-group">
+							<input type="text" id="1" placeholder="Name" class="form-control"/><br />
+							<input type="text" id="2" placeholder="Rollno" class="form-control" /><br />
+							<input type="text" id="3" placeholder="sub1" class="form-control"/><br />
+							<input type="text" id="4" placeholder="sub2" class="form-control" /><br />
+							<input type="text" id="5" placeholder="sub3" class="form-control" /><br />
+							<input type="text" id="6" placeholder="total" class="form-control" /><br />
+							<input type="text" id="7" placeholder="per" class="form-control" /><br />
+							<input type="text" id="8" placeholder="status" class="form-control" /><br />
+							<input type="button" value="ADD TABLE" id="btn" />
+								
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row col-md-12  table-responsive">
+				<table id="tid" border="1" cellpadding="10" cellspacing="10" class="table " style="background-color:papayawhip"></table>
+			</div>
+		</div>
+
+		<script src="Bootstrap/js/jquery.min.js"></script>
+		<script src="Bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			data = [];
+			var total1l;
+			$(document).ready(function () {
+				$("#btn").click(function () {
+					var name1 = $("#1").val();
+					var roll = Number($("#2").val());
+					var s1 = Number($("#3").val());
+					var s2 = Number($("#4").val());
+					var s3 = Number($("#5").val());
+					total1 = s1 + s2 + s3;
+					var p = total1 / 3;
+					
+					var s = $("#8").val();
+						
+					data.push({ "name": name1, "rollno": roll, "sub1": s1, "sub2": s2, "sub3": s3, "total": total1, "per": p,"status":s});
+					display();
+					
+					
+				});
+				$("#6").click(function () {
+					var a = Number($("#3").val()) + Number($("#4").val()) + Number($("#5").val());
+
+					$("#6").val(a);
+					var per = a / 3;
+					$("#7").val(per);
+					if(per>=35)
+					{
+						$("#8").val("pass");
+					}
+					else {
+						$("#8").val("fail");
+					}
+				});
+			});
+				function display() {
+					$("#tid").empty();
+					$("#tid").html("<tr>" + "<th>name</th>" + "<th>rollno</th>" + "<th>sub1</th>" + "<th>sub2</th>" + "<th>sub3</th>" + "<th>total</th>" + "<th>per</th>" +"<th>status</th>"+"<th>delete</th>"+ "</tr>");
+					$.each(data, function (i, d) {
+							if(data[i].status=="pass"){
+								$("#tid").append("<tr style='background-color:#00FF00;'><td>" + data[i].name + "</td><td>" + data[i].rollno + "</td><td>" + data[i].sub1 + "</td><td>" + data[i].sub2 + "</td><td>" + data[i].sub3 + "</td><td>" + data[i].total + "</td><td>" + data[i].per +"</td><td>"+data[i].status+ "</td>"+"<td>" + "<input type='button' value='x'  onclick='remove(" + i + ")'/>" + "</td>" + "</tr>");
+							}else{
+								$("#tid").append("<tr style='background-color:#FF6347;'><td>" + data[i].name + "</td><td>" + data[i].rollno + "</td><td>" + data[i].sub1 + "</td><td>" + data[i].sub2 + "</td><td>" + data[i].sub3 + "</td><td>" + data[i].total + "</td><td>" + data[i].per +"</td><td>"+data[i].status+ "</td>"+"<td>" + "<input type='button' value='x'  onclick='remove(" + i + ")'/>" + "</td>" + "</tr>");
+							}
+					});
+					$("#1").val(" ");
+					$("#2").val(" ");
+					$("#3").val(" ");
+					$("#4").val(" ");
+					$("#5").val(" ");
+					$("#6").val(" ");
+					$("#7").val(" ");
+					$("#8").val(" ");
+				}
+				function remove(x) {
+					alert(x);
+					data.splice(x, 1);
+					display();
+				}
+				
+
+			  
+
+				
+		</script>
+				 
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <input type="text" id="1" placeholder="Enter value" />
+    <input type="button" id="btn1" value="ok" />
+    <ul id="demo"></ul>
+   <script>
+       data = [];
+       $(document).ready(function () {
+           $("btn1").click(function () {
+               var a = Number($("#1").val());
+               data.push(a);
+               display();
+           });
+
+           function display() {
+               $("#demo").empty();
+               $.each(data, function (i, d)
+               {
+                   $("#demo").append("<li>" + d + "</li>");
+                   if ($("#1").val() == "") {
+                       $("#1").css("border_color", "red");
+                   }
+                   else {
+                       $("#1").css("border_color", "green");
+                   }
+               });
+           }
+       });
+        
+   </script>
+
+
+</body>
+</html>

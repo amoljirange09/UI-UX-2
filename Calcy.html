@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <title>My Calculator</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row col-md-12">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <input id="txt" type="text" style="width:292px;height:50px;" value="" disabled />
+                </div>
+                <div class="col-md-12" style="margin-top:30px;">
+                    <button id="plus" type="button" style="width:70px;height:50px;" class="btn btn-info" value="+">+</button>
+                    <button id="minus" type="button" style="width:70px;height:50px;" class="btn btn-info" value="-">-</button>
+                    <button id="mul" type="button" style="width:70px;height:50px;" class="btn btn-info" value="*">*</button>
+                    <button id="division" type="button" style="width:70px;height:50px;" class="btn btn-info" value="%">%</button>
+                </div>
+                <div class="col-md-12" style="margin-top:30px;">
+                    <div class="col-md-9" style="padding:0px;position:absolute;">
+                        <div class="col-md-12" style="margin-top:30px;padding:0px;">
+                            <button id="7" type="button" style="width:70px;height:50px;" class="btn btn-info" value="7">7</button>
+                            <button id="8" type="button" style="width:70px;height:50px;" class="btn btn-info" value="8">8</button>
+                            <button id="9" type="button" style="width:70px;height:50px;" class="btn btn-info" value="9">9</button>
+                        </div>
+                        <div class="col-md-12" style="margin-top:30px;padding:0px;">
+                            <button id="4" type="button" style="width:70px;height:50px;" class="btn btn-info" value="4">4</button>
+                            <button id="5" type="button" style="width:70px;height:50px;" class="btn btn-info" value="5">5</button>
+                            <button id="6" type="button" style="width:70px;height:50px;" class="btn btn-info" value="6">6</button>
+                        </div>
+                        <div class="col-md-12" style="margin-top:30px;padding:0px;">
+                            <button id="1" type="button" style="width:70px;height:50px;" class="btn btn-info" value="1">1</button>
+                            <button id="2" type="button" style="width:70px;height:50px;" class="btn btn-info" value="2">2</button>
+                            <button id="3" type="button" style="width:70px;height:50px;" class="btn btn-info" value="3">3</button>
+                        </div>
+                        <div class="col-md-12" style="margin-top:30px;padding:0px;">
+                            <button id="0" type="button" style="width:70px;height:50px;" class="btn btn-info" value="0">0</button>
+                            <button id="PT" type="button" style="width:70px;height:50px;" class="btn btn-info" value=".">.</button>
+                            <button id="C" type="button" style="width:70px;height:50px;" class="btn btn-info" value="C">C</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="position:absolute;left:225px;">
+                        <div class="col-md-12" style="margin-top:30px;padding:0px;">
+                            <button id="equalto" type="button" style="width:70px;height:290px;" class="btn btn-info" value="=">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="Bootstrap/js/jquery.min.js"></script>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var append_flag = true;
+            var n = 0; n1 = 0; n2 = 0; n3 = 0; 
+
+            $("#1").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "1");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("1");
+                    append_flag = true;
+                }
+            })
+            $("#2").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "2");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("2");
+                    append_flag = true;
+                }
+            })
+            $("#3").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "3");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("3");
+                    append_flag = true;
+                }
+            })
+            $("#4").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "4");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("4");
+                    append_flag == true;
+                }
+            })
+            $("#5").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "5");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("5");
+                    append_flag = true;
+                }
+            })
+            $("#6").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "6");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("6");
+                    append_flag = true;
+                }
+            })
+            $("#7").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "7");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("7");
+                    append_flag = true;
+                }
+            })
+            $("#8").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "8");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("8");
+                    append_flag = true;
+                }
+            })
+            $("#9").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "9");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("9");
+                    append_flag = true;
+                }
+            })
+            $("#0").click(function () {
+                if (append_flag == true) {
+                    n = $("#txt").val();
+                    $("#txt").val(n + "0");
+                } else {
+                    n1 = $("#txt").val();
+                    $("#txt").val("0");
+                    append_flag = true;
+                }
+            })
+          
+            $("#plus").click(function () {
+                n1 = $("#txt").val();
+                append_flag = false;
+            });
+           
+            $("#equalto").click(function () {
+                n2 = $("#txt").val();
+                n3 = parseInt(n1) + parseInt(n2);
+                $("#txt").val(n3);
+            });
+
+
+            $("#C").click(function () {
+
+                $("#txt").val("");
+                n1 = 0; n2 = 0; n3 = 0;
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

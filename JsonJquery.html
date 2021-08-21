@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Bootstrap/js/jquery.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+    <input type="text" id="1" placeholder="name" /><br />
+    <input type="button" id="btn" value="ok" /><br />
+    <ul id="demo"></ul>
+    <script>
+        data = [];
+        $(document).ready(function () {
+            function display()
+            {
+                $("#demo").empty();
+                //for loop each
+                $.each(data, function (i,d)
+                    {
+                    $("#demo").append("<li>" +d+ "</li>");
+                })
+            }
+
+           
+            $("#btn").click(function () {
+                var a = $("#1").val();
+                data.push(a);
+                display();
+               
+            })
+
+        })
+    </script>
+    
+         
+     
+    </body>
+    </html>
+
+     
+          
